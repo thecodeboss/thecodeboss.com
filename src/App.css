@@ -1,0 +1,16 @@
+#root {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.header h3 {
+  margin: 0;
+  flex-grow: 1;
+}
