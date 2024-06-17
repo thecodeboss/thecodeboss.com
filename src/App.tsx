@@ -1,4 +1,5 @@
 import "./App.css";
+import Collapse from "./components/Collapse";
 
 // TODO: Procedural generation of background
 // Public contributions to open source
@@ -22,6 +23,11 @@ import "./App.css";
 // Some Android/iOS/React Native experience
 
 function App() {
+  const collapseText = `
+    Okay so I need to write a whole bunch of text to see how well this thing wraps.
+    I'm not sure how it's going to look, but I'm hoping it looks pretty good.
+    Okay this is probably enough text to see how it's going to wrap.
+  `;
   return (
     <>
       <div className="header">
@@ -31,6 +37,7 @@ function App() {
         <a>contact</a>
       </div>
       <p>Welcome! I'm Michael Oliver.</p>
+      <Collapse label="Kubernetes" children={collapseText} />
       <p>Skills</p>
       <p>
         Kubernetes, TypeScript/JavaScript, React, Docker, AWS, GraphQL,
