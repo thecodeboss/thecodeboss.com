@@ -1,0 +1,47 @@
+.nav {
+  background-color: #303030;
+  border-radius: 3rem;
+  border: 1px solid #383838;
+  flex-basis: 25%;
+  font-size: 1.125rem;
+  padding: 0rem 2rem;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  color: #ffffff;
+  list-style-type: none;
+}
+
+.nav a {
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.nav a:hover {
+  color: #ffc53d;
+}
+
+.nav a.active {
+  color: #ffc53d;
+  position: relative;
+}
+
+.nav a.active span {
+  background-color: #ffc53d;
+  bottom: -1px;
+  height: 2px;
+  left: 0.5rem;
+  position: absolute;
+  right: 0.5rem;
+}

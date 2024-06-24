@@ -1,16 +1,26 @@
 #root {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
 
 .header {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
 
 .header h3 {
+  flex-basis: 25%;
+  font-size: 1.5rem;
   margin: 0;
-  flex-grow: 1;
+}
+
+.light-dark-toggle {
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 25%;
 }
