@@ -6,6 +6,7 @@ import "./index.css";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import Projects from "./pages/Projects.tsx";
+import { initBackgroundShader } from "./utils/shader";
 
 const router = createBrowserRouter([
   {
@@ -32,4 +33,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
+);
+
+initBackgroundShader(
+  document.getElementById("background") as HTMLCanvasElement
 );

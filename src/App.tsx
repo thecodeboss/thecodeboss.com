@@ -25,14 +25,14 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <div>
       <div className="header">
         <h3>thecodeboss</h3>
         <Nav />
         <div className="light-dark-toggle"></div>
       </div>
       <Outlet />
-    </>
+    </div>
   );
 }
 
