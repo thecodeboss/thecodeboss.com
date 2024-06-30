@@ -1,0 +1,37 @@
+.project {
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.project:hover {
+  background-color: #303030;
+  filter: drop-shadow(0px 0px 8px rgb(0, 0, 0, 0.2));
+  cursor: pointer;
+}
+
+.project span {
+  color: #888;
+  font-weight: bold;
+}
+
+.project a, .project span {
+  margin-top: auto;
+}
+
+.project-header {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-header h4 {
+  margin: 0;
+}
+
+.project-header img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}

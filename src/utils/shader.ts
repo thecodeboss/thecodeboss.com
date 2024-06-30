@@ -36,7 +36,7 @@ const fragmentShaderSource = `
     uv.x *= iResolution.x / iResolution.y;
 
     // Animation by moving the noise over time
-    float n = noise(uv * 10.0 + vec2(iTime * 0.1, iTime * 0.1));
+    float n = noise(uv * 10.0 + vec2(iTime * 0.12, iTime * 0.12));
 
     // Create color based on noise value
     vec3 color = vec3(0.08) * (1.0 + n);
