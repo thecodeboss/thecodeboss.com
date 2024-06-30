@@ -1,17 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.tsx";
+
+import Layout from "@/Layout";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+import Projects from "@/pages/Projects";
+import { initBackgroundShader } from "@/utils/shader";
+
 import "./index.css";
-import About from "./pages/About.tsx";
-import Contact from "./pages/Contact.tsx";
-import Projects from "./pages/Projects.tsx";
-import { initBackgroundShader } from "./utils/shader";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Layout />,
     children: [
       {
         path: "/about?",

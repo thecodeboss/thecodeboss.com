@@ -1,0 +1,10 @@
+ul.contact li {
+  font-size: 1.375rem;
+  list-style-type: lower-roman;
+  margin: 0;
+  padding: 0;
+}
+
+ul.contact li a {
+  text-decoration: underline dotted;
+}

@@ -1,0 +1,16 @@
+footer {
+  align-items: center;
+  display: flex;
+  font-size: 1.25rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+footer a:not(:first-of-type) {
+  border-left: 2px solid #666;
+  padding-left: 1rem;
+}
+
+footer a:not(:last-of-type) {
+  padding-right: 1rem;
+}

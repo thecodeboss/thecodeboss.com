@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Nav from "./components/Nav";
-import "./App.css";
+
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import "./Layout.css";
 
 // TODO: Procedural generation of background
 // Public contributions to open source
@@ -23,17 +25,12 @@ import "./App.css";
 
 // Some Android/iOS/React Native experience
 
-function App() {
+export default function Layout() {
   return (
-    <div>
-      <div className="header">
-        <h3>thecodeboss</h3>
-        <Nav />
-        <div className="light-dark-toggle"></div>
-      </div>
+    <>
+      <Header />
       <Outlet />
-    </div>
+      <Footer />
+    </>
   );
 }
-
-export default App;

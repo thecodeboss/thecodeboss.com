@@ -1,28 +1,36 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Nav.css";
 
 const navItems = [
   {
     label: "About",
-    href: "/about",
+    to: "/about",
   },
   {
     label: "Projects",
-    href: "/projects",
+    to: "/projects",
   },
   {
     label: "Contact",
-    href: "/contact",
+    to: "/contact",
   },
 ];
 
 export default function Nav() {
+  const { pathname } = useLocation();
   return (
     <nav className="nav">
       <ul>
-        {navItems.map(({ label, href }) => (
+        {navItems.map(({ label, to }) => (
           <li key={label}>
-            <NavLink to={href}>
+            <NavLink
+              to={to}
+              className={({ isActive }) =>
+                isActive || (to === "/about" && pathname === "/")
+                  ? "active"
+                  : ""
+              }
+            >
               {label}
               <span></span>
             </NavLink>
