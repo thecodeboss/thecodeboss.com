@@ -42,13 +42,13 @@ const projects: (ProjectProps & { key: string })[] = [
 export default function Projects() {
   return (
     <main>
-      <h3>Projects</h3>
+      <h2>Projects</h2>
       <div className="project-container">
         {projects.map((project) => (
           <Project {...project} />
         ))}
       </div>
-      <h3>Skills</h3>
+      <h2>Skills</h2>
       <p>
         If you're looking for a more detailed list of my skills, here's a list.
         They aren't ordered by profiency, so if you have questions about
@@ -64,7 +64,7 @@ export default function Projects() {
         Express, Lodash, Zod, Ant Design, Prisma, Moment.js, Styled Components,
         Webpack, Storybook, Cypress, SWC, Jest, Husky
       </p>
-      <h3>AWS</h3>
+      <h2>AWS</h2>
       <p>
         Since AWS in particular is such a broad category, here are specific AWS
         products I've worked with:
