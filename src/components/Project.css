@@ -1,4 +1,5 @@
 .project {
+  background-color: #292929;
   border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -11,12 +12,18 @@
   cursor: pointer;
 }
 
+.project p {
+  font-weight: normal;
+}
+
 .project span {
   color: #888;
   font-weight: bold;
 }
 
-.project a, .project span {
+.project-footer {
+  display: flex;
+  justify-content: space-between;
   margin-top: auto;
 }
 

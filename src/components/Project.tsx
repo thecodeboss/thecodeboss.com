@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Project.css";
 
 export interface ProjectProps {
-  description: string;
+  description: React.ReactNode;
   imageAlt?: string;
   image?: {
     alt: string;
@@ -11,6 +11,7 @@ export interface ProjectProps {
   };
   link?: string;
   title: string;
+  year: number;
 }
 
 export default function Project({
@@ -18,6 +19,7 @@ export default function Project({
   image,
   link,
   title,
+  year,
 }: ProjectProps) {
   const content = (
     <>
@@ -29,15 +31,18 @@ export default function Project({
         <h4>{title}</h4>
       </div>
       <p>{description}</p>
-      {link ? (
-        <Link to={link} target="_blank">
-          <i className="fa-solid fa-arrow-up-right-from-square" />
-          &nbsp;
-          {new URL(link).hostname}
-        </Link>
-      ) : (
-        <span>(Private)</span>
-      )}
+      <div className="project-footer">
+        {link ? (
+          <Link to={link} target="_blank">
+            <i className="fa-solid fa-arrow-up-right-from-square" />
+            &nbsp;
+            {new URL(link).hostname}
+          </Link>
+        ) : (
+          <span>(Private)</span>
+        )}
+        <span>{year}</span>
+      </div>
     </>
   );
 
