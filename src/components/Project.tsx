@@ -33,11 +33,11 @@ export default function Project({
       <p>{description}</p>
       <div className="project-footer">
         {link ? (
-          <Link to={link} target="_blank">
+          <span className="link">
             <i className="fa-solid fa-arrow-up-right-from-square" />
             &nbsp;
             {new URL(link).hostname}
-          </Link>
+          </span>
         ) : (
           <span>(Private)</span>
         )}

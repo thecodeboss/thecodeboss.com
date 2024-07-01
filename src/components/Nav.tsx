@@ -11,6 +11,10 @@ const navItems = [
     to: "/projects",
   },
   {
+    label: "Experience",
+    to: "/experience",
+  },
+  {
     label: "Contact",
     to: "/contact",
   },

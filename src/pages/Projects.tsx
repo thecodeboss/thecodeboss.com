@@ -128,14 +128,18 @@ export default function Projects() {
         Below is a selection of open-source projects I've written. I've
         contributed to many more that aren't listed here, but you can find them
         on my{" "}
-        <Link className="underline" to="https://github.com/thecodeboss">
+        <Link
+          className="underline"
+          target="_blank"
+          to="https://github.com/thecodeboss"
+        >
           GitHub
         </Link>
         .
       </p>
       <div className="project-container">
-        {openSourceProjects.map((project) => (
-          <Project {...project} />
+        {openSourceProjects.map(({ key, ...props }) => (
+          <Project key={key} {...props} />
         ))}
       </div>
       <h2 className="mt-1">Work Projects</h2>
@@ -146,51 +150,10 @@ export default function Projects() {
         here, feel free to reach out.
       </p>
       <div className="project-container">
-        {workProjects.map((project) => (
-          <Project {...project} />
+        {workProjects.map(({ key, ...props }) => (
+          <Project key={key} {...props} />
         ))}
       </div>
-      <h2>Skills</h2>
-      <p>
-        If you're looking for a more detailed list of my skills, here's a list.
-        They aren't ordered by profiency, so if you have questions about
-        specific projects/experience with these technologies,{" "}
-        <Link className="underline" to="/contact">
-          contact me
-        </Link>
-        .
-      </p>
-      <p>
-        Kubernetes, Helm, Pulumi, Docker, AWS, TypeScript/JavaScript, C/C++,
-        Python, Rust, Elixir, React, GraphQL, Elasticsearch, Redis, PostgreSQL,
-        HTML/CSS, CI/CD React, Next.js, Express, Lodash, Zod, Ant Design,
-        Prisma, Moment.js, Styled Components, Webpack, Storybook, Cypress, SWC,
-        Jest, Husky, Datadog, Sentry, PagerDuty, Sendgrid, Apache Superset,
-        LaunchDarkly, CircleCI, GitHub, Depot, Figma, Retool, Spinnaker, Apache
-        Thrift, Azure Document Intelligence, Windows/Linux/Mac
-      </p>
-      <h2>AWS</h2>
-      <p>
-        Since AWS in particular is such a broad category, here are specific AWS
-        products I've worked with:
-      </p>
-      <p>
-        S3, EC2 (Instances, Load Balancers, Security Groups, EBS Volumes, Custom
-        AMIs), RDS (Aurora, PostgreSQL), Lambda, API Gateway, CloudFront,
-        CloudWatch, Route 53, IAM, Cognito, SES, SQS, DynamoDB, Elastic
-        Beanstalk, ECR, EKS, ECS, Fargate, Secrets Manager, WAF, CloudTrail,
-        Amplify, VPCs/Subnets, OpenSearch/Elasticsearch, ElastiCache (Redis),
-        Glue, Athena, Redshift, Certificate Manager
-      </p>
-      <p>Projects</p>
-      <p>
-        Private NPM Registry, Kubernetes Preview Environments, Diglett,
-        Docusaurus Docs, Integration API, Marketplace Service, Gears of War
-      </p>
-      <p>Standards</p>
-      <p>OAuth 2.0, SCIM, JWT</p>
-      <p>Random</p>
-      <p>https://projecteuler.net/progress=michael.oliver</p>
     </main>
   );
 }

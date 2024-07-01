@@ -13,7 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+#root {
+  background-color: #242424;
+  display: flex;
+  filter: drop-shadow(0px 5px 32px rgb(0, 0, 0, 0.4));
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  padding: 0 8rem;
+  width: 100%;
+}
+
+a, span.link {
   color: rgba(255, 255, 255, 0.87);
   font-weight: 500;
   text-decoration: inherit;
@@ -54,8 +66,19 @@ h2 {
   margin: 0;
 }
 
+main {
+  flex-grow: 1;
+}
+
 p {
   font-size: 1.125rem;
+}
+
+.light-dark-toggle {
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 25%;
 }
 
 .mt-1 {
