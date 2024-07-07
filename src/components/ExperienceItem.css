@@ -1,0 +1,22 @@
+.experience-item {
+  background-color: #292929;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.experience-item:first-child {
+  margin-top: 1rem;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-fade {
+  opacity: 0.65;
+}

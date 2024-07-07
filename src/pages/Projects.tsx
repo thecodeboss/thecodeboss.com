@@ -32,10 +32,10 @@ export default function Projects() {
       </div>
       <h2 className="mt-1">Work Projects</h2>
       <p>
-        Below is a sample of meaningful projects I've worked on, some
-        open-source and others private to their respective companies. If you're
-        interested in more details about these projects or others not mentioned
-        here, feel free to reach out.
+        Here's a sample of meaningful projects I've worked on, some open-source
+        and others private to their respective companies. If you're interested
+        in more details about these projects or others not mentioned here, feel
+        free to reach out.
       </p>
       <div className="project-container">
         {workProjects.map(({ key, ...props }) => (
@@ -44,7 +44,7 @@ export default function Projects() {
       </div>
       <h4 className="attributions-header">Icon Attributions</h4>
       <p className="small">
-        Many of the icons used above were created by talented artists on
+        Some of the icons used above were created by talented artists on
         Flaticon:
       </p>
       <div className="attributions">
