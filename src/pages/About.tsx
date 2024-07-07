@@ -6,7 +6,7 @@ export default function About() {
       <img
         alt="Photo of me petting a bunny in Kraków, Poland"
         className="hero"
-        src="/bunny.jpg"
+        src="/bunny.webp"
       />
       <h1>
         I'm Michael Oliver, a software engineer passionate about science,

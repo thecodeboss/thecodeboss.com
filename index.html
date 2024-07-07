@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://ka-f.fontawesome.com" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/bunny.webp"
+      type="image/webp"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michael Oliver</title>
   </head>
   <body>
     <canvas id="background"></canvas>
     <div id="root"></div>
-    <script
-      src="https://kit.fontawesome.com/9386abcad7.js"
-      crossorigin="anonymous"
-    ></script>
     <script type="module" src="/src/main.tsx"></script>
+    <script
+      crossorigin="anonymous"
+      defer
+      src="https://kit.fontawesome.com/9386abcad7.js"
+    ></script>
   </body>
 </html>
