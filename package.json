@@ -4,6 +4,8 @@
   "scripts": {
     "build": "bun --filter frontend build",
     "dev": "bun --filter frontend dev",
+    "infra:deploy": "bun --filter infra deploy",
+    "infra:preview": "bun --filter infra preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "bun --filter frontend preview"
   },

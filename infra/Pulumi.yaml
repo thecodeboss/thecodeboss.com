@@ -1,0 +1,10 @@
+name: thecodeboss.com
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+description: Infrastructure for thecodeboss.com
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript

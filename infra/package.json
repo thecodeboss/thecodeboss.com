@@ -1,6 +1,16 @@
 {
   "name": "infra",
   "main": "index.ts",
-  "devDependencies": {},
-  "dependencies": {}
+  "scripts": {
+    "deploy": "pulumi up -s prod",
+    "preview": "pulumi preview -s prod --diff"
+  },
+  "devDependencies": {
+    "@types/node": "^20"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^6.43.0",
+    "@pulumi/awsx": "^2.13.0",
+    "@pulumi/pulumi": "^3.122.0"
+  }
 }
