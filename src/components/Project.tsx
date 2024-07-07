@@ -4,9 +4,11 @@ import "./Project.css";
 
 export interface ProjectProps {
   description: React.ReactNode;
+  faIcon?: string;
   imageAlt?: string;
   image?: {
     alt: string;
+    round?: boolean;
     url: string;
   };
   link?: string;
@@ -16,6 +18,7 @@ export interface ProjectProps {
 
 export default function Project({
   description,
+  faIcon,
   image,
   link,
   title,
@@ -24,10 +27,17 @@ export default function Project({
   const content = (
     <>
       <div className="project-header">
-        <img
-          alt={image?.alt ?? "Project image"}
-          src={image?.url ?? "https://placehold.co/50x50/000/FFF"}
-        />
+        <div className="project-image-container">
+          {faIcon ? (
+            <i className={`fa-solid fa-${faIcon}`} />
+          ) : (
+            <img
+              alt={image?.alt ?? "Project image"}
+              className={image?.round ? "round" : undefined}
+              src={image?.url ?? "https://placehold.co/50x50/000/FFF"}
+            />
+          )}
+        </div>
         <h4>{title}</h4>
       </div>
       <p>{description}</p>

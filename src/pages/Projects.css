@@ -3,3 +3,15 @@
   gap: 0.5rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+
+.attributions {
+  font-size: 0.875rem;
+}
+
+.attributions a:not(:last-child)::after {
+  content: " | ";
+}
+
+.attributions-header {
+  margin: 1rem 0;
+}
