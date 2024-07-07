@@ -50,7 +50,10 @@ const fragmentShaderSource = `
 `;
 
 function createShader(gl: WebGLRenderingContext, type: GLenum, source: string) {
-  const shader = gl.createShader(type)!;
+  const shader = gl.createShader(type);
+  if (!shader) {
+    return null;
+  }
   gl.shaderSource(shader, source);
   gl.compileShader(shader);
   return shader;
@@ -89,6 +92,9 @@ export function initBackgroundShader(canvas: HTMLCanvasElement): void {
     gl.FRAGMENT_SHADER,
     fragmentShaderSource
   );
+  if (!vertexShader || !fragmentShader) {
+    return;
+  }
   const program = createProgram(gl, vertexShader, fragmentShader);
   if (!program) {
     return;

@@ -10,9 +10,9 @@ export default function ExperiencePage() {
       <Experience experiences={workExperiences} />
       <h2>Skills</h2>
       <p>
-        If you're looking for a detailed list of my skills, here's a list. They
-        aren't ordered by profiency, so if you have questions about specific
-        projects/experience with these technologies,{" "}
+        If you&apos;re looking for a detailed list of my skills, here&apos;s a
+        list. They aren&apos;t ordered by profiency, so if you have questions
+        about specific projects/experience with these technologies,{" "}
         <Link className="underline" to="/contact">
           contact me
         </Link>
@@ -30,7 +30,7 @@ export default function ExperiencePage() {
       <h2>AWS</h2>
       <p>
         Since AWS in particular is such a broad category, here are specific AWS
-        products I've worked with:
+        products I&apos;ve worked with:
       </p>
       <p>
         S3, EC2 (Instances, Load Balancers, Security Groups, EBS Volumes, Custom

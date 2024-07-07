@@ -13,9 +13,9 @@ export default function Projects() {
     <main>
       <h2>Open-Source Projects</h2>
       <p>
-        Below is a selection of open-source projects I've written. I've
-        contributed to many more that aren't listed here, but you can find them
-        on my{" "}
+        Below is a selection of open-source projects I&apos;ve written.
+        I&apos;ve contributed to many more that aren&apos;t listed here, but you
+        can find them on my{" "}
         <Link
           className="underline"
           target="_blank"
@@ -32,10 +32,10 @@ export default function Projects() {
       </div>
       <h2 className="mt-1">Work Projects</h2>
       <p>
-        Here's a sample of meaningful projects I've worked on, some open-source
-        and others private to their respective companies. If you're interested
-        in more details about these projects or others not mentioned here, feel
-        free to reach out.
+        Here&apos;s a sample of meaningful projects I&apos;ve worked on, some
+        open-source and others private to their respective companies. If
+        you&apos;re interested in more details about these projects or others
+        not mentioned here, feel free to reach out.
       </p>
       <div className="project-container">
         {workProjects.map(({ key, ...props }) => (

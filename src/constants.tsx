@@ -221,20 +221,21 @@ export const workExperiences: ExperienceItemProps[] = [
           grow from a small team of 6 to over 100 employees, working on
           everything from core platform, APIs, infrastructure, CI/CD tooling,
           and developer tooling, to AI models, frontend, and more. In addition
-          to direct engineering work, I've also interviewed hundreds of
+          to direct engineering work, I&apos;ve also interviewed hundreds of
           candidates and mentored dozens of engineers.
         </p>
         <p>
-          But don't just take it from me; here's a quote from one of my peers:
+          But don&apos;t just take it from me; here&apos;s a quote from one of
+          my peers:
         </p>
         <blockquote>
           Michael is quickly able to find good solutions to problems, and often
-          in areas he's not familiar with. I've never worked with someone as
-          adept as Michael about diving in somewhere new, and quickly providing
-          insight in ways that others miss/overlook. He's a truly valuable asset
-          in filling in gaps in our general triaging/incident response
-          procedures, and I trust that the work he produces will be done
-          thoughtfully and effectively.
+          in areas he&apos;s not familiar with. I&apos;ve never worked with
+          someone as adept as Michael about diving in somewhere new, and quickly
+          providing insight in ways that others miss/overlook. He&apos;s a truly
+          valuable asset in filling in gaps in our general triaging/incident
+          response procedures, and I trust that the work he produces will be
+          done thoughtfully and effectively.
         </blockquote>
       </>
     ),
