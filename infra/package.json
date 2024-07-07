@@ -1,0 +1,6 @@
+{
+  "name": "infra",
+  "main": "index.ts",
+  "devDependencies": {},
+  "dependencies": {}
+}

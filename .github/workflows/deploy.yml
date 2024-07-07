@@ -20,4 +20,5 @@ jobs:
       - run: bun install
       - run: bun run build
       - run: aws s3 sync dist/ s3://thecodeboss --delete
+        working-directory: frontend
       - run: aws cloudfront create-invalidation --distribution-id EAPXF0HO4B4M5 --paths "/*"
