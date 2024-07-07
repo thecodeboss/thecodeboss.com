@@ -19,6 +19,5 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: bun install
       - run: bun run build
-      - run: aws s3 sync dist/ s3://thecodeboss --delete
-        working-directory: frontend
+      - run: aws s3 sync frontend/dist/ s3://thecodeboss --delete
       - run: aws cloudfront create-invalidation --distribution-id EAPXF0HO4B4M5 --paths "/*"
