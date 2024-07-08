@@ -1,12 +1,29 @@
 import * as aws from "@pulumi/aws";
+import * as synced_folder from "@pulumi/synced-folder";
+import path = require("path");
+
+const FRONTEND_DIST_DIRECTORY = path.join(__dirname, "../frontend/dist");
 
 const bucket = new aws.s3.Bucket("bucket", {
   bucket: "thecodeboss",
 });
 
-new aws.s3.BucketPublicAccessBlock("public-access-block", {
-  bucket: bucket.bucket,
-});
+const publicAccessBlock = new aws.s3.BucketPublicAccessBlock(
+  "public-access-block",
+  {
+    bucket: bucket.bucket,
+  }
+);
+
+new synced_folder.S3BucketFolder(
+  "synced-folder",
+  {
+    path: FRONTEND_DIST_DIRECTORY,
+    bucketName: bucket.bucket,
+    acl: "private",
+  },
+  { dependsOn: [publicAccessBlock] }
+);
 
 const originAccessControl = new aws.cloudfront.OriginAccessControl(
   "origin-access-control",

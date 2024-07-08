@@ -93,7 +93,7 @@ p.small {
 .mt-1 {
   margin-top: 1rem;
 }
-
+/* 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -105,4 +105,4 @@ p.small {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
