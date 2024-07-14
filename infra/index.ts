@@ -36,7 +36,7 @@ const originAccessControl = new aws.cloudfront.OriginAccessControl(
   }
 );
 
-new aws.cloudfront.Distribution("cdn", {
+const distribution = new aws.cloudfront.Distribution("cdn", {
   aliases: ["thecodeboss.com", "www.thecodeboss.com"],
   enabled: true,
   origins: [
@@ -86,3 +86,5 @@ new aws.cloudfront.Distribution("cdn", {
     sslSupportMethod: "sni-only",
   },
 });
+
+export const distributionId = distribution.id;

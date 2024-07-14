@@ -20,9 +20,11 @@ jobs:
           aws-region: us-west-1
           role-to-assume: arn:aws:iam::191767792151:role/GitHubActionsRole
       - uses: pulumi/actions@v5
+        id: pulumi
         with:
           command: up
           stack-name: prod
           work-dir: ./infra
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+      - run: aws cloudfront create-invalidation --distribution-id ${{ steps.pulumi.outputs.distributionId }} --paths "/*"

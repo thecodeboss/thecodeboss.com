@@ -23,11 +23,11 @@ export default function ExperiencePage() {
         <p>
           Kubernetes, Helm, Pulumi, Docker, AWS, TypeScript/JavaScript, C/C++,
           Python, Rust, Elixir, React/React Native, GraphQL, Elasticsearch,
-          Redis, PostgreSQL, HTML/CSS, CI/CD React, Next.js, Express, Lodash,
-          Zod, Ant Design, Prisma, Moment.js, Styled Components, Webpack,
-          Storybook, Cypress, SWC, Jest, Husky, Datadog, Sentry, PagerDuty,
-          Sendgrid, Apache Superset, LaunchDarkly, CircleCI, GitHub, Depot,
-          Figma, Retool, Spinnaker, Apache Thrift, Azure Document Intelligence,
+          Redis, PostgreSQL, HTML/CSS, CI/CD, Next.js, Express, Lodash, Zod, Ant
+          Design, Prisma, Moment.js, Styled Components, Webpack, Storybook,
+          Cypress, SWC, Jest, Husky, Datadog, Sentry, PagerDuty, Sendgrid,
+          Apache Superset, LaunchDarkly, CircleCI, GitHub, Depot, Figma, Retool,
+          Spinnaker, Apache Thrift, Azure Document Intelligence,
           Windows/Linux/Mac
         </p>
       </div>
