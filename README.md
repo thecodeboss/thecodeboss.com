@@ -2,7 +2,7 @@
 
 ## Description
 
-Michael Oliver's personal website built with React/TypeScript, using Vite.
+[Michael Oliver's personal website](https://thecodeboss.com) built with React/TypeScript, using Vite.
 
 ## Install
 
