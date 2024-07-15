@@ -69,8 +69,7 @@ body {
   overflow-x: hidden;
 
   /* Prevent content shifting when scrollbar appears */
-  padding-left: calc((100vw - 100%) / 2);
-  padding-right: calc((100vw - 100%) / 2);
+  padding-left: calc(100vw - 100%);
 }
 
 /* Mobile-only */
