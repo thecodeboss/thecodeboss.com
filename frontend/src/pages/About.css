@@ -5,3 +5,24 @@
   margin-left: 2rem;
   width: 450px;
 }
+
+@media screen and (max-width: 600px) {
+  .hero {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .hero {
+    margin: 0 calc((100% - 450px) / 2);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    float: none;
+    height: auto;
+    max-width: 450px;
+    width: 80%;
+  }
+}

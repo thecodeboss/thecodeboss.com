@@ -7,6 +7,12 @@
   padding: 0rem 2rem;
 }
 
+@media screen and (max-width: 740px) {
+  .nav {
+    margin-bottom: 1rem;
+  }
+}
+
 .nav ul {
   display: flex;
   flex-direction: row;
@@ -14,6 +20,12 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .nav ul {
+    gap: 1rem;
+  }
 }
 
 .nav li {

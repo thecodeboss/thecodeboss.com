@@ -3,7 +3,7 @@ footer {
   display: flex;
   font-size: 1.25rem;
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 footer a:not(:first-of-type) {
