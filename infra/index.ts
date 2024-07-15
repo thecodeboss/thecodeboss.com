@@ -18,9 +18,9 @@ const publicAccessBlock = new aws.s3.BucketPublicAccessBlock(
 new synced_folder.S3BucketFolder(
   "synced-folder",
   {
-    path: FRONTEND_DIST_DIRECTORY,
-    bucketName: bucket.bucket,
     acl: "private",
+    bucketName: bucket.bucket,
+    path: FRONTEND_DIST_DIRECTORY,
   },
   { dependsOn: [publicAccessBlock] }
 );
@@ -38,27 +38,6 @@ const originAccessControl = new aws.cloudfront.OriginAccessControl(
 
 const distribution = new aws.cloudfront.Distribution("cdn", {
   aliases: ["thecodeboss.com", "www.thecodeboss.com"],
-  enabled: true,
-  origins: [
-    {
-      originAccessControlId: originAccessControl.id,
-      originId: bucket.bucketRegionalDomainName,
-      domainName: bucket.bucketRegionalDomainName,
-    },
-  ],
-  defaultRootObject: "index.html",
-  httpVersion: "http2and3",
-  isIpv6Enabled: true,
-  defaultCacheBehavior: {
-    allowedMethods: ["GET", "HEAD"],
-    cachedMethods: ["GET", "HEAD"],
-    // This is an AWS managed cache policy
-    cachePolicyId: "658327ea-f89d-4fab-a63d-7e88639e58f6",
-    compress: true,
-    targetOriginId: bucket.bucketRegionalDomainName,
-    viewerProtocolPolicy: "redirect-to-https",
-  },
-  priceClass: "PriceClass_All",
   customErrorResponses: [
     {
       errorCachingMinTtl: 300,
@@ -73,6 +52,27 @@ const distribution = new aws.cloudfront.Distribution("cdn", {
       responsePagePath: "/index.html",
     },
   ],
+  defaultCacheBehavior: {
+    allowedMethods: ["GET", "HEAD"],
+    cachedMethods: ["GET", "HEAD"],
+    // This is an AWS managed cache policy
+    cachePolicyId: "658327ea-f89d-4fab-a63d-7e88639e58f6",
+    compress: true,
+    targetOriginId: bucket.bucketRegionalDomainName,
+    viewerProtocolPolicy: "redirect-to-https",
+  },
+  defaultRootObject: "index.html",
+  enabled: true,
+  httpVersion: "http2and3",
+  isIpv6Enabled: true,
+  origins: [
+    {
+      domainName: bucket.bucketRegionalDomainName,
+      originAccessControlId: originAccessControl.id,
+      originId: bucket.bucketRegionalDomainName,
+    },
+  ],
+  priceClass: "PriceClass_All",
   restrictions: {
     geoRestriction: {
       restrictionType: "none",
