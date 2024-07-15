@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { type ProjectProps } from "@/components/Project";
 import { type ExperienceItemProps } from "@/components/ExperienceItem";
 
@@ -339,5 +341,29 @@ export const educationExperiences: ExperienceItemProps[] = [
     },
     location: "Waterloo, ON, Canada",
     start: new Date("2011-09-01"),
+  },
+];
+
+export const publications: ExperienceItemProps[] = [
+  {
+    company:
+      "The Hydrogen Atom: Applications of Ordinary Differential Equations",
+    description:
+      "Exploring the Hydrogen atom mathematically, focusing on an electron's orbit using Quantum Mechanics and the Schrödinger Equation. It solves key differential equations through methods such as Legendre Polynomials, Spherical Harmonics, and Laguerre Polynomials, culminating in visualizations of hydrogen density plots and determination of energy levels and states.",
+    image: {
+      alt: "Diagram showing probability density of an electron in a hydrogen atom",
+      round: true,
+      url: "/project-icons/atom.webp",
+    },
+    location: (
+      <Link
+        to="https://www.academia.edu/10147927/The_Hydrogen_Atom_Applications_of_Ordinary_Differential_Equations"
+        className="link"
+        target="_blank"
+      >
+        <i className="fa-solid fa-arrow-up-right-from-square" />
+        &nbsp; academia.edu
+      </Link>
+    ),
   },
 ];

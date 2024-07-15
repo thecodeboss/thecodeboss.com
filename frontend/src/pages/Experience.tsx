@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 
 import Experience from "@/components/Experience";
-import { educationExperiences, workExperiences } from "@/constants";
+import {
+  educationExperiences,
+  publications,
+  workExperiences,
+} from "@/constants";
 import "./Experience.css";
 
 export default function ExperiencePage() {
@@ -48,6 +52,8 @@ export default function ExperiencePage() {
       </div>
       <h2>Education</h2>
       <Experience experiences={educationExperiences} />
+      <h2>Publications</h2>
+      <Experience experiences={publications} />
     </main>
   );
 }

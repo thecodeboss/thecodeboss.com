@@ -9,7 +9,13 @@ export default function Experience({ experiences }: ExperienceProps) {
   return (
     <div className="experience">
       {experiences.map((experience) => (
-        <ExperienceItem key={experience.start.toISOString()} {...experience} />
+        <ExperienceItem
+          key={
+            experience.start?.toISOString() ||
+            experience.description?.toString()
+          }
+          {...experience}
+        />
       ))}
     </div>
   );

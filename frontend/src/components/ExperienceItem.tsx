@@ -8,30 +8,46 @@ export interface ExperienceItemProps {
   end?: Date;
   image: {
     alt: string;
+    round?: boolean;
     url: string;
   };
-  location: string;
+  location: React.ReactNode;
   role?: string;
-  start: Date;
+  start?: Date;
 }
 
 export default function ExperienceItem(experience: ExperienceItemProps) {
   return (
-    <div className="experience-item" key={experience.start.toISOString()}>
-      <img alt={experience.image.alt} src={experience.image.url} />
+    <div
+      className="experience-item"
+      key={
+        experience.start?.toISOString() || experience.description?.toString()
+      }
+    >
+      <img
+        alt={experience.image.alt}
+        className={experience.image?.round ? "round" : undefined}
+        src={experience.image.url}
+      />
       <div className="experience-content">
         <h3>
           {experience.role ? `${experience.role} - ` : null}
           {experience.company}
         </h3>
-        <span className="experience-fade">
-          {formatDate(experience.start)}
-          {" - "}
-          {experience.end ? formatDate(experience.end) : "Present"}
-          {" • "}
-          {formatDuration(experience.start, experience.end)}
-        </span>
-        <span className="experience-fade">{experience.location}</span>
+        {experience.start && (
+          <span className="experience-fade">
+            {formatDate(experience.start)}
+            {" - "}
+            {experience.end ? formatDate(experience.end) : "Present"}
+            {" • "}
+            {formatDuration(experience.start, experience.end)}
+          </span>
+        )}
+        {typeof experience.location === "string" ? (
+          <span className="experience-fade">{experience.location}</span>
+        ) : (
+          experience.location
+        )}
         {typeof experience.description === "string" ? (
           <p>{experience.description}</p>
         ) : (
