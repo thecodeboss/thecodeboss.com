@@ -15,6 +15,10 @@ const publicAccessBlock = new aws.s3.BucketPublicAccessBlock(
   }
 );
 
+const logsBucket = new aws.s3.Bucket("logs-bucket", {
+  bucket: "thecodeboss-logs",
+});
+
 new synced_folder.S3BucketFolder(
   "synced-folder",
   {
@@ -65,6 +69,9 @@ const distribution = new aws.cloudfront.Distribution("cdn", {
   enabled: true,
   httpVersion: "http2and3",
   isIpv6Enabled: true,
+  loggingConfig: {
+    bucket: logsBucket.bucketDomainName,
+  },
   origins: [
     {
       domainName: bucket.bucketRegionalDomainName,
