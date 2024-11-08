@@ -213,6 +213,18 @@ export const iconAttributions = [
 
 export const workExperiences: ExperienceItemProps[] = [
   {
+    company: "OpenAI",
+    description:
+      "Working hard on the Identity Platform team! More to come soon.",
+    image: {
+      alt: "OpenAI logo",
+      url: "/company-logos/openai.webp",
+    },
+    location: "San Francisco, CA",
+    role: "Member of Technical Staff",
+    start: new Date("Nov 5 2024"),
+  },
+  {
     company: "Kojo",
     description: (
       <>
@@ -241,6 +253,7 @@ export const workExperiences: ExperienceItemProps[] = [
         </blockquote>
       </>
     ),
+    end: new Date("Nov 1 2024"),
     image: {
       alt: "Kojo logo",
       url: "/project-icons/kojo.webp",
