@@ -31,3 +31,9 @@ To build the project to the `/dist` directory, use:
 ```sh
 bun run build
 ```
+
+## License
+
+This repository is proprietary and not open source. See [LICENSE](./LICENSE)
+for the usage restrictions and [TRADEMARKS.md](./TRADEMARKS.md) for the
+branding and identity restrictions.
