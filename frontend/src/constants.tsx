@@ -214,8 +214,42 @@ export const iconAttributions = [
 export const workExperiences: ExperienceItemProps[] = [
   {
     company: "OpenAI",
-    description:
-      "Working hard on the Identity Platform team! More to come soon.",
+    description: (
+      <>
+        <p>
+          Architected and launched the Global Admin Console (
+          <Link className="link" target="_blank" to="https://admin.openai.com">
+            admin.openai.com&nbsp;
+            <i className="fa-solid fa-arrow-up-right-from-square" />
+          </Link>
+          ), the centralized identity control plane for Business and Enterprise
+          customers to manage tenant-level identity across OpenAI products,
+          including domain verification and mapping plus unified SSO across
+          ChatGPT workspaces and API Platform organizations. Owned delivery
+          end-to-end, from API design through frontend architecture and
+          engineering standards such as SSR, i18n across 64 languages, and deep
+          observability with detailed tracing, logging, and metrics.
+        </p>
+        <p>
+          Delivered a platform now used by hundreds of large Enterprise
+          customers and many thousands of Business customers, and that serves as
+          part of the identity foundation for OpenAI&apos;s company-wide{" "}
+          <Link
+            className="link"
+            target="_blank"
+            to="https://openai.com/index/introducing-openai-frontier/"
+          >
+            Frontier&nbsp;
+            <i className="fa-solid fa-arrow-up-right-from-square" />
+          </Link>{" "}
+          effort. Drove key portions of the migration of OpenAI&apos;s
+          authentication stack from a third-party vendor to in-house systems,
+          strengthened the company&apos;s SSO architecture, and expanded SSO to
+          Business plans through a cross-team effort, broadening what had
+          previously been an Enterprise-only capability.
+        </p>
+      </>
+    ),
     image: {
       alt: "OpenAI logo",
       url: "/company-logos/openai.webp",
