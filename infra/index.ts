@@ -1,6 +1,6 @@
 import * as aws from "@pulumi/aws";
 import * as synced_folder from "@pulumi/synced-folder";
-import path = require("path");
+import * as path from "node:path";
 
 const FRONTEND_DIST_DIRECTORY = path.join(__dirname, "../frontend/dist");
 
