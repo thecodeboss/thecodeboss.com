@@ -13,12 +13,19 @@ export default function About() {
         computing, and making a difference in the world.
       </h1>
       <p>
-        I&apos;ve been at Kojo for 5+ years where I&apos;ve been making
-        construction materials management faster, easier, and more sustainable
-        by empowering our engineering teams. I focus primarily on our
-        infrastucture, CI/CD pipelines, and developer experience, though
-        I&apos;ve been known to jump into frontend work, training AI models,
-        security, or whatever else needs to be done.
+        I&apos;m currently at OpenAI, where I&apos;m passionately working on
+        building secure authentication and identity solutions for the future of
+        AI. I love building the kind of systems that let people move fast with
+        confidence: secure by default, reliable under pressure, and thoughtful
+        about the details.
+      </p>
+      <p>
+        Before that, I spent 5+ years at Kojo helping make construction
+        materials management faster, easier, and more sustainable while also
+        growing the engineering organization and platform. I worked across
+        infrastructure, CI/CD pipelines, developer experience, APIs, security,
+        frontend, and even AI work when needed, and I was often the person
+        jumping into the highest-leverage problem in front of the team.
       </p>
       <p>
         When I&apos;m not coding, I&apos;m either traveling the world, hiking,
