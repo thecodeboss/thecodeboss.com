@@ -34,7 +34,7 @@ jobs:
           aws-region: us-west-1
           role-to-assume: arn:aws:iam::191767792151:role/GitHubActionsRole
       - name: Deploy Infrastructure
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@8582a9e8cc630786854029b4e09281acd6794b58 # v6.6.1
         id: pulumi
         with:
           command: up
